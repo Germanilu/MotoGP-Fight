@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Clase screen general para pantallas*/
+.screen{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Pantallas con respectivo bg */
+.screen1{
+    background-image: url(/img/bg/firstbg.jpg);
+}
+
+.screen2{
+    background-image: url(/img/bg/secondbg.jpg);
+}
+
+.screen3{
+    background-image: url(/img/bg/thirdbg.jpg);
+}
+
