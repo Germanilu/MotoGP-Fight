@@ -1,7 +1,7 @@
 
 
 //Funcion Random que genera 1 numero de entre 2 que se pasan por parametro.
-const random = (a,b) => Math.floor(Math.random()*(b-a)+(a));
+const random = (a,b) => Math.floor(Math.random()*(b-a)+a);
 //Bucle para generar los numeros que quiere el prompt
 for(i =0; i< 2 ; i++){
     // console.log(random(numeroInferior,numeroSuperior));
@@ -12,18 +12,37 @@ for(i =0; i< 2 ; i++){
 
 
 
-//Creo la clase Riders 
-// class Riders {
-//     constructor(name,hp,att,def,luck){
-//         this.name = name;
-//         this.hp = hp;
-//         this.att = att;
-//         this.def = def;
-//         this.luck = luck;
-//     }
+// Creo la clase Riders 
+class Riders {
+    constructor(name,att,def){
+        this.name = name;
+        this.att = att;
+        this.def = def;
+        this.hp = 100;
+        this.luck = random(1,10);
+    }
 
-//     attack(){
-        
-//     }
-// }
+    attack(){
+        this.att += this.luck
+    }
+}
+
+
+//Instanciando los Riders
+let rossi = new Riders("Rossi",10,10);
+let marquez = new Riders("Marquez",10,10);
+let bastianini = new Riders("Bastianini",10,10);
+let martin = new Riders("Martin",10,10);
+let mir = new Riders("Mir",10,10);
+let oliveira = new Riders("Oliveira",10,10);
+let quartararo = new Riders("Quartararo",10,10);
+let zarco = new Riders("Zarco",10,10);
+
+
+
+
+
+
+
+
 
