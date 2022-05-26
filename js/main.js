@@ -1,5 +1,4 @@
 
-
 //Cambio de pantalla
 const changeScreen = (numScreen) => {
     let fasewant = "section" + numScreen; // Concateno la palabra section con el numero de pantalla
@@ -10,3 +9,5 @@ const changeScreen = (numScreen) => {
         document.getElementById(_f).style.display = "none"; //Recorro el array y les doy a todas las pantallas (menos la pantalla donde estoy ) un display none
     }
 }
+
+console.log(rossi)
