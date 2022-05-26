@@ -13,13 +13,54 @@
 /* Pantallas con respectivo bg */
 .screen1{
     background-image: url(/img/bg/firstbg.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .screen2{
     background-image: url(/img/bg/secondbg.jpg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .screen3{
     background-image: url(/img/bg/thirdbg.jpg);
 }
 
+
+/* Titulo de la seccion 1 */
+.section1-title{
+    width: 400px;
+    height: 100px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Contenedor Pilotos */
+
+.container-riders{
+    width: 90%;
+    height: 50%;
+    border: 1px solid rgb(143, 50, 50);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-selection{
+    width: 90%;
+    height: 50%;
+    border: 1px solid rgb(177, 177, 177);
+}
+
+.img-riders{
+    width: 200px;
+    height: 200px;
+}
