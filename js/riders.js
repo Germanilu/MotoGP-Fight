@@ -7,11 +7,6 @@ for(i =0; i< 2 ; i++){
     // console.log(random(numeroInferior,numeroSuperior));
 }
 
-
-
-
-
-
 // Creo la clase Riders 
 class Riders {
     constructor(name,att,def){

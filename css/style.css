@@ -61,6 +61,28 @@
 }
 
 .img-riders{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+.container-selection{
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+}
+
+.box-player{
+    width: 20em;
+    height: 100%;
+    border: 1px solid black;
+}
+/* Btn Fight */
+
+.btn-fight{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
