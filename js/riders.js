@@ -9,31 +9,34 @@ for(i =0; i< 2 ; i++){
 
 // Creo la clase Riders 
 class Riders {
-    constructor(name,att,def){
+    constructor(name,att,def,img){
         this.name = name;
         this.att = att;
         this.def = def;
+        this.img = img
         this.hp = 100;
         this.luck = random(1,10);
+
     }
 
     attack(){
         this.att += this.luck
         this.hp -= this.att
-        console.log("HE atacado")
+        console.log("He atacado")
     }
 }
 
 
 //Instanciando los Riders
-let rossi = new Riders("Rossi",10,10);
-let marquez = new Riders("Marquez",10,10);
+let rossi = new Riders("Rossi",10,10,);
+let marquez = new Riders("Marquez",10,10,);
 let bastianini = new Riders("Bastianini",10,10);
 let martin = new Riders("Martin",10,10);
 let mir = new Riders("Mir",10,10);
 let oliveira = new Riders("Oliveira",10,10);
 let quartararo = new Riders("Quartararo",10,10);
 let zarco = new Riders("Zarco",10,10);
+
 
 
 

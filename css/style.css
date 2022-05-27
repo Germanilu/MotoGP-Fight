@@ -94,3 +94,10 @@
     height: 30em;
 }
 
+
+
+.bastianiniimg{
+    background-image: url(/img/Riders/bastianini.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
