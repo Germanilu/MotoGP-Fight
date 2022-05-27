@@ -29,6 +29,9 @@
 
 .screen3{
     background-image: url(/img/bg/thirdbg.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
@@ -86,3 +89,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.screen3 .box-player{
+    height: 30em;
+}
+

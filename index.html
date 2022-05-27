@@ -22,41 +22,41 @@
         <div class="screen2 screen">
             <!-- Contenedor con todos los Riders -->
             <div class="container-riders">
-                <div id="bastianini">
+                <div id="bastianini" onclick="add(bastianini)">
                     <img src="img/Riders/bastianini.png" alt="" class="img-riders">
                 </div>
-                <div id="marquez">
+                <div id="marquez" onclick="add(marquez)">
                     <img src="img/Riders/marquez.png" alt="" class="img-riders">
                 </div>
                 
-                <div id="martin">
+                <div id="martin" onclick="add(martin)">
                     <img src="img/Riders/martin.png" alt="" class="img-riders">
                 </div>
                 
-                <div id="mir">
+                <div id="mir" onclick="add(mir)">
                     <img src="img/Riders/mir.png" alt="" class="img-riders">
                 </div>
                 
-                <div id="oliveira">
+                <div id="oliveira" onclick="add(oliveira)">
                     <img src="img/Riders/oliveira.png" alt="" class="img-riders">
                 </div>
                     
-                <div id="quartararo">
+                <div id="quartararo" onclick="add(quartararo)">
                     <img src="img/Riders/quartararo.png" alt="" class="img-riders">
                 </div>
                 
-                <div id="rossi">
+                <div id="rossi" onclick="add(rossi)">
                     <img src="img/Riders/rossi.png" alt="" class="img-riders">
                 </div>
                 
-                <div id="zarco">
+                <div id="zarco" onclick="add(zarco)">
                     <img src="img/Riders/zarco.png" alt="" class="img-riders">
                 </div>
             </div>
             <div class="container-selection">
-                <div class="box-player">Aqui va seleccion 1</div>
+                <div id="player1" class="box-player">Aqui va seleccion 1</div>
                 <div class="btn-fight" onclick="changeScreen(3)">Fight!</div>
-                <div class="box-player">Aqui va seleccion 2</div>
+                <div id="player2" class="box-player">Aqui va seleccion 2</div>
             </div>
             
         </div>
@@ -65,8 +65,12 @@
 
 
     <!-- Pantalla 3 -->
-    <section id="section3" style="display:none;" onclick="changeScreen(1)">
-        <div class="screen3 screen"></div>
+    <section id="section3" style="display:none;">
+        <div class="screen3 screen">
+            <div class="box-player"></div>
+            <div class="btn-fight" onclick="fight()">fight</div>
+            <div class="box-player"></div>
+        </div>
     </section>
 
 

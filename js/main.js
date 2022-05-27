@@ -1,5 +1,5 @@
 
-//Cambio de pantalla
+//Funcion Cambio de pantalla
 const changeScreen = (numScreen) => {
     let fasewant = "section" + numScreen; // Concateno la palabra section con el numero de pantalla
     let arrFases = ["section1", "section2","section3"]; //Creo el array con las 3 pantallas
@@ -10,4 +10,33 @@ const changeScreen = (numScreen) => {
     }
 }
 
-console.log(rossi)
+let arr = [];
+//Funcion para añadir el piloto al array
+const add = (character) => {
+    arr.push(character);
+    return arr
+    //document.querySelector("#bastianini").style.display = "none" al seleccionar bastianini me quita la imagen de la seleccion de pilotos
+}
+
+
+//Funcion Lucha
+const fight = () => {
+    arr[0].attack()
+    console.log(arr[0])
+    arr[1].attack()
+    console.log(arr[1])
+    
+    if(arr[0].hp <= 0){
+        console.log(arr[1].name, "ha ganado")
+    }else if(arr[1].hp <= 0){
+        console.log(arr[1].name, "ha ganado")
+    }
+ }
+ 
+
+//document.querySelector("#bastianini").style.display = "none" al seleccionar bastianini me quita la imagen de la seleccion de pilotos
+
+
+
+
+

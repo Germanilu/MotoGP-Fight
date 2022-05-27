@@ -19,6 +19,8 @@ class Riders {
 
     attack(){
         this.att += this.luck
+        this.hp -= this.att
+        console.log("HE atacado")
     }
 }
 
@@ -34,19 +36,8 @@ let quartararo = new Riders("Quartararo",10,10);
 let zarco = new Riders("Zarco",10,10);
 
 
-//Creando un objeto con todos los riders
-let allRiders = {
-    1: rossi,
-    2: marquez,
-    3: bastianini,
-    4: martin,
-    5: mir,
-    6: oliveira,
-    7: quartararo,
-    8: zarco,
-}
 
-console.log(allRiders) 
+
 
 
 
