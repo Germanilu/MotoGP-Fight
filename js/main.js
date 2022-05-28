@@ -11,15 +11,11 @@ const changeScreen = (numScreen) => {
 }
 
 
-
-
-let arr = [];
-
 //Funcion para añadir el piloto al array
 const add = (character) => {
 
-    if(arr.length == 0){
-        arr.push(character);
+    if(jugadores.length == 0){
+        jugadores.push(character);
         //Creo variable player 1 para añadir la imagen en el screen 2 y sucesivamente pasarla al screen 3
         let player1 = document.querySelector("#player1");
         player1.innerHTML = `<img src="./img/Riders/${character.name}.png" />`
@@ -29,8 +25,8 @@ const add = (character) => {
         // Se bloquea el piloto en la pantalla
         document.querySelector(`#${character.name}`).classList.add("selected") 
         
-    }else if(arr.length == 1){
-        arr.push(character)
+    }else if(jugadores.length == 1){
+        jugadores.push(character)
         let player2 = document.querySelector("#player2");
         player2.innerHTML = `<img src="./img/Riders/${character.name}.png" />`
         team2.innerHTML = player2.innerHTML
@@ -40,10 +36,10 @@ const add = (character) => {
         console.log("No se pueden añadir mas pilotos! ") // Enseñar cartel que no se pueden añadir mas pilotos a la lucha
     }
     //IF para que aparezca el boton para continuar a la siguiente pantalla
-    if(arr.length == 2){
+    if(jugadores.length == 2){
         document.querySelector(".btn-start").style.display = "flex";
     }
-    return arr
+    return jugadores
 }
 
 
@@ -51,32 +47,32 @@ const add = (character) => {
 
 //Funcion Lucha
 const fight = () => {
-    let ganador;
-    arr[0].attack()
-    console.log(arr[0])
+    jugadores[0].attack()
     //Modifico el width de la barra de vida cada golpe
-    document.querySelector(".vidap1").style.width = `${arr[0].hp}px`;
-    arr[1].attack()
-    console.log(arr[1])
-    document.querySelector(".vidap2").style.width = `${arr[1].hp}px`;
+    document.querySelector(".vidap1").style.width = `${jugadores[0].hp}px`;
+    jugadores[1].attack()
+    document.querySelector(".vidap2").style.width = `${jugadores[1].hp}px`;
 
-    if(arr[0].hp <= 0){
-        document.querySelector(".vidap1").style.width = `0px`;
-    }else if(arr[1].hp <= 0){
-        document.querySelector(".vidap2").style.width = `0px`;
-    }
-
-    if(arr[0].hp <= 0 || arr[1].hp <= 0){
+    if(jugadores[0].hp <= 0 || jugadores[1].hp <= 0){
+        //Quito el boton fight y enseño el contenedor del ganador
         document.querySelector("#btn-fight").style.display = "none"
         let displayGanador = document.querySelector(".ganador");
         displayGanador.style.display = "flex"
 
-        if(arr[0].hp > 0){
-            displayGanador.innerHTML = `Gana  ${arr[0].name}`
+        if(jugadores[0].hp > 0){
+            //para que la barra de vida se ponga en 0
+            document.querySelector(".vidap2").style.width = `0px`;
+            //Enseño quien es el ganador
+            displayGanador.innerHTML = `Gana  ${jugadores[0].name}`
+            //Paso en la pantalla 4 la imagen y el nombre del ganador
+            document.querySelector("#winner").innerHTML = `<img src="./img/Riders/${jugadores[0].name}.png" />`
+            document.querySelector("#winner-name").innerHTML = jugadores[0].name
             
         }else{
-            displayGanador.innerHTML = `Gana  ${arr[1].name}`
-            
+            document.querySelector(".vidap1").style.width = `0px`;
+            displayGanador.innerHTML = `Gana  ${jugadores[1].name}`
+            document.querySelector("#winner").innerHTML = `<img src="./img/Riders/${jugadores[1].name}.png" />`
+            document.querySelector("#winner-name").innerHTML = jugadores[1].name
         }
         //Funcion Timeout para cambiar a la ultima pantalla
        setTimeout(() =>{
@@ -92,6 +88,5 @@ const fight = () => {
 
 let team1 = document.querySelector("#p1");
 let team2 = document.querySelector("#p2");
-
-
+let jugadores = [];
 

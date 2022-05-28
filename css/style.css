@@ -210,5 +210,13 @@
 .winner-container{
     width: 200px;
     height: 350px;
-    border: 1em solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 1em;
+}
+
+.winner-name{
+    text-transform: capitalize;
 }
