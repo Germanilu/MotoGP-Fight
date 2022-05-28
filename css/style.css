@@ -95,9 +95,7 @@
 }
 
 
-
-.bastianiniimg{
-    background-image: url(/img/Riders/bastianini.png);
-    background-repeat: no-repeat;
-    background-position: center;
+.selected {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }

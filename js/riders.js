@@ -28,14 +28,14 @@ class Riders {
 
 
 //Instanciando los Riders
-let rossi = new Riders("Rossi",10,10,);
-let marquez = new Riders("Marquez",10,10,);
-let bastianini = new Riders("Bastianini",10,10);
-let martin = new Riders("Martin",10,10);
-let mir = new Riders("Mir",10,10);
-let oliveira = new Riders("Oliveira",10,10);
-let quartararo = new Riders("Quartararo",10,10);
-let zarco = new Riders("Zarco",10,10);
+let rossi = new Riders("rossi",10,10,);
+let marquez = new Riders("marquez",10,10,);
+let bastianini = new Riders("bastianini",10,10);
+let martin = new Riders("martin",10,10);
+let mir = new Riders("mir",10,10);
+let oliveira = new Riders("oliveira",10,10);
+let quartararo = new Riders("quartararo",10,10);
+let zarco = new Riders("zarco",10,10);
 
 
 
