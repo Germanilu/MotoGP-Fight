@@ -2,7 +2,7 @@
 //Funcion Cambio de pantalla
 const changeScreen = (numScreen) => {
     let fasewant = "section" + numScreen; // Concateno la palabra section con el numero de pantalla
-    let arrFases = ["section1", "section2","section3"]; //Creo el array con las 3 pantallas
+    let arrFases = ["section1", "section2","section3","section4"]; //Creo el array con las 3 pantallas
     arrFases = arrFases.filter(val => !fasewant.includes(val)); //con .filter elimino del array la pantalla donde estoy y me quedaran solo las otras
     document.getElementById(fasewant).style.display = "block"; // Enseño la pantalla elegida con display block
     for (let _f of arrFases) {
@@ -19,7 +19,6 @@ let arr = [];
 const add = (character) => {
 
     if(arr.length == 0){
-        console.log("arr[0]",character.name)
         arr.push(character);
         //Creo variable player 1 para añadir la imagen en el screen 2 y sucesivamente pasarla al screen 3
         let player1 = document.querySelector("#player1");
@@ -31,7 +30,6 @@ const add = (character) => {
         document.querySelector(`#${character.name}`).classList.add("selected") 
         
     }else if(arr.length == 1){
-        console.log("arr[1]",character.name)
         arr.push(character)
         let player2 = document.querySelector("#player2");
         player2.innerHTML = `<img src="./img/Riders/${character.name}.png" />`
@@ -53,6 +51,7 @@ const add = (character) => {
 
 //Funcion Lucha
 const fight = () => {
+    let ganador;
     arr[0].attack()
     console.log(arr[0])
     //Modifico el width de la barra de vida cada golpe
@@ -60,14 +59,13 @@ const fight = () => {
     arr[1].attack()
     console.log(arr[1])
     document.querySelector(".vidap2").style.width = `${arr[1].hp}px`;
-    
-    if(arr[0].hp <= 0){
 
+    if(arr[0].hp <= 0){
         document.querySelector(".vidap1").style.width = `0px`;
     }else if(arr[1].hp <= 0){
-
         document.querySelector(".vidap2").style.width = `0px`;
     }
+
     if(arr[0].hp <= 0 || arr[1].hp <= 0){
         document.querySelector("#btn-fight").style.display = "none"
         let displayGanador = document.querySelector(".ganador");
@@ -75,12 +73,15 @@ const fight = () => {
 
         if(arr[0].hp > 0){
             displayGanador.innerHTML = `Gana  ${arr[0].name}`
+            
         }else{
             displayGanador.innerHTML = `Gana  ${arr[1].name}`
+            
         }
-
-       
-
+        //Funcion Timeout para cambiar a la ultima pantalla
+       setTimeout(() =>{
+        changeScreen(4)
+       },2000)
     }
  }
  
