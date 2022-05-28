@@ -1,3 +1,8 @@
+//Variables 
+let team1 = document.querySelector("#p1");
+let team2 = document.querySelector("#p2");
+let jugadores = [];
+
 
 //Funcion Cambio de pantalla
 const changeScreen = (numScreen) => {
@@ -42,9 +47,6 @@ const add = (character) => {
     return jugadores
 }
 
-
-
-
 //Funcion Lucha
 const fight = () => {
     jugadores[0].attack()
@@ -52,10 +54,17 @@ const fight = () => {
     document.querySelector(".vidap1").style.width = `${jugadores[0].hp}px`;
     jugadores[1].attack()
     document.querySelector(".vidap2").style.width = `${jugadores[1].hp}px`;
+
+    //IF para los criticos, si el jugador saca en suerte un 9 el ataque se multiplica
+    if(jugadores[0].luck == 9){
+        jugadores[0].att *= 2;
+    }else if (jugadores[1].luck == 9){
+        jugadores[1]. att *= 2;
+    }
+
     //Easter Egg, Rossi vs Marquez, ganara siempre Rossi.
     if( ((jugadores[0].name == "rossi") || (jugadores[1].name == "rossi")) && ((jugadores[0].name == "marquez") || (jugadores[1].name == "marquez")) ){
         marquez.att += 20;
-        console.log(marquez)
     }
 
     if(jugadores[0].hp <= 0 || jugadores[1].hp <= 0){
@@ -94,7 +103,5 @@ const reload = () => {
 }
 
 
-let team1 = document.querySelector("#p1");
-let team2 = document.querySelector("#p2");
-let jugadores = [];
+
 
