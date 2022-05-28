@@ -24,7 +24,10 @@ const add = (character) => {
         let player1 = document.querySelector("#player1");
         player1.innerHTML = `<img src="./img/Riders/${character.name}.png" />`
         team1.innerHTML = player1.innerHTML
-        document.querySelector(`#${character.name}`).classList.add("selected") // Se bloquea el piloto en la pantalla
+        //Añado nombre piloto debajo de su imagen
+        document.querySelector("#statsp1").innerHTML = character.name;
+        // Se bloquea el piloto en la pantalla
+        document.querySelector(`#${character.name}`).classList.add("selected") 
         
     }else if(arr.length == 1){
         console.log("arr[1]",character.name)
@@ -32,7 +35,7 @@ const add = (character) => {
         let player2 = document.querySelector("#player2");
         player2.innerHTML = `<img src="./img/Riders/${character.name}.png" />`
         team2.innerHTML = player2.innerHTML
-        document.querySelector("#player2").innerHTML = `<img src="./img/Riders/${character.name}.png" />` 
+        document.querySelector("#statsp2").innerHTML = character.name;
         document.querySelector(`#${character.name}`).classList.add("selected") 
     }else{
         console.log("No se pueden añadir mas pilotos! ") // Enseñar cartel que no se pueden añadir mas pilotos a la lucha

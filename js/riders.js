@@ -9,11 +9,10 @@ for(i =0; i< 2 ; i++){
 
 // Creo la clase Riders 
 class Riders {
-    constructor(name,att,def,img){
+    constructor(name,att,def){
         this.name = name;
         this.att = att;
         this.def = def;
-        this.img = img
         this.hp = 100;
         this.luck = random(1,10);
 
