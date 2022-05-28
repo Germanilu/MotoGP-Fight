@@ -40,6 +40,10 @@ const add = (character) => {
     }else{
         console.log("No se pueden añadir mas pilotos! ") // Enseñar cartel que no se pueden añadir mas pilotos a la lucha
     }
+    //IF para que aparezca el boton para continuar a la siguiente pantalla.
+    if(arr.length == 2){
+        document.querySelector(".btn-fight").style.display = "flex";
+    }
     return arr
 }
 

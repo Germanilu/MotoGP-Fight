@@ -61,18 +61,18 @@
                     <h1>Zarco</h1>
                 </div>
             </div>
+            <!-- Contenedor con los personajes seleccionados -->
             <div class="container-selection">
                 <div class="container-player">
                     <div id="player1" class="box-player"></div>
                     <div class="stats" id="statsp1"></div>
                 </div>
-                
-                <div class="btn-fight" onclick="changeScreen(3)">Fight!</div>
-                
+                <!-- Boton para pasar a la pelea -->
+                <div class="btn-fight" onclick="changeScreen(3)" style="display:none;">Fight!</div>
                 <div class="container-player">
                     <div id="player2" class="box-player"></div>
                     <div class="stats" id="statsp2"></div>
-                    
+                
                 </div>
             </div>
             
@@ -84,14 +84,22 @@
     <!-- Pantalla 3 -->
     <section id="section3" style="display:none;">
         <div class="screen3 screen">
+            <!-- Contenedor con los pilotos y su barra de vida -->
             <div class="container-player-screen3">
+                <!-- Contenedor piloto1 -->
                 <div class="box-player-screen3" id="p1">Aqui el piloto 1</div>
-                <div class="vidap1" id="hpPlayer1"></div>
+                <div class="vida">
+                    <div class="vidap1" id="hpPlayer1"></div>
+                </div>
             </div>
+            <!-- Div para disparar la funcion fight() -->
             <div class="btn-fight" onclick="fight()">fight</div>
+            <!-- Contenedor piloto2 -->
             <div class="container-player-screen3">
                 <div class="box-player-screen3" id="p2">Aqui el piloto 2</div>
-                <div class="vidap2" id="hpPlayer2"></div>
+                <div class="vida" >
+                    <div class="vidap2" id="hpPlayer2"></div>
+                </div>
             </div>
             
         </div>
