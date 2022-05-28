@@ -21,7 +21,7 @@ class Riders {
     attack(){
         this.att += this.luck
         this.hp -= this.att
-        console.log("He atacado")
+       
     }
 }
 

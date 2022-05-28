@@ -13,7 +13,7 @@
     <section id="section1" onclick="changeScreen(2)">
         <div class="screen1 screen">
             <!-- Diiv con titulo de la primera pantalla -->
-            <div class="section1-title"><h1>MotoGP Fight!</h1></div>
+            <div class="section1-title"></div>
         </div>
         
     </section>
@@ -68,7 +68,7 @@
                     <div class="stats" id="statsp1"></div>
                 </div>
                 <!-- Boton para pasar a la pelea -->
-                <div class="btn-fight" onclick="changeScreen(3)" style="display:none;">Fight!</div>
+                <div class="btn-start" onclick="changeScreen(3)" style="display:none;"></div>
                 <div class="container-player">
                     <div id="player2" class="box-player"></div>
                     <div class="stats" id="statsp2"></div>
@@ -93,7 +93,8 @@
                 </div>
             </div>
             <!-- Div para disparar la funcion fight() -->
-            <div class="btn-fight" onclick="fight()">fight</div>
+            <div class="btn-fight" onclick="fight()" style="display:flex;" id="btn-fight"></div>
+            <div class="ganador"></div>
             <!-- Contenedor piloto2 -->
             <div class="container-player-screen3">
                 <div class="box-player-screen3" id="p2">Aqui el piloto 2</div>

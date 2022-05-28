@@ -17,6 +17,7 @@ let arr = [];
 
 //Funcion para añadir el piloto al array
 const add = (character) => {
+
     if(arr.length == 0){
         console.log("arr[0]",character.name)
         arr.push(character);
@@ -40,9 +41,9 @@ const add = (character) => {
     }else{
         console.log("No se pueden añadir mas pilotos! ") // Enseñar cartel que no se pueden añadir mas pilotos a la lucha
     }
-    //IF para que aparezca el boton para continuar a la siguiente pantalla.
+    //IF para que aparezca el boton para continuar a la siguiente pantalla
     if(arr.length == 2){
-        document.querySelector(".btn-fight").style.display = "flex";
+        document.querySelector(".btn-start").style.display = "flex";
     }
     return arr
 }
@@ -60,13 +61,26 @@ const fight = () => {
     console.log(arr[1])
     document.querySelector(".vidap2").style.width = `${arr[1].hp}px`;
     
-
     if(arr[0].hp <= 0){
-        console.log(arr[1].name, "ha ganado")
+
         document.querySelector(".vidap1").style.width = `0px`;
     }else if(arr[1].hp <= 0){
-        console.log(arr[1].name, "ha ganado")
+
         document.querySelector(".vidap2").style.width = `0px`;
+    }
+    if(arr[0].hp <= 0 || arr[1].hp <= 0){
+        document.querySelector("#btn-fight").style.display = "none"
+        let displayGanador = document.querySelector(".ganador");
+        displayGanador.style.display = "flex"
+
+        if(arr[0].hp > 0){
+            displayGanador.innerHTML = `Gana  ${arr[0].name}`
+        }else{
+            displayGanador.innerHTML = `Gana  ${arr[1].name}`
+        }
+
+       
+
     }
  }
  
