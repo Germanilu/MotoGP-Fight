@@ -52,6 +52,11 @@ const fight = () => {
     document.querySelector(".vidap1").style.width = `${jugadores[0].hp}px`;
     jugadores[1].attack()
     document.querySelector(".vidap2").style.width = `${jugadores[1].hp}px`;
+    //Easter Egg, Rossi vs Marquez, ganara siempre Rossi.
+    if( ((jugadores[0].name == "rossi") || (jugadores[1].name == "rossi")) && ((jugadores[0].name == "marquez") || (jugadores[1].name == "marquez")) ){
+        marquez.att += 20;
+        console.log(marquez)
+    }
 
     if(jugadores[0].hp <= 0 || jugadores[1].hp <= 0){
         //Quito el boton fight y enseño el contenedor del ganador
