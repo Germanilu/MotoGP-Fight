@@ -50,18 +50,24 @@ const add = (character) => {
 const fight = () => {
     arr[0].attack()
     console.log(arr[0])
+    //Modifico el width de la barra de vida cada golpe
+    document.querySelector(".vidap1").style.width = `${arr[0].hp}px`;
     arr[1].attack()
     console.log(arr[1])
+    document.querySelector(".vidap2").style.width = `${arr[1].hp}px`;
     
+
     if(arr[0].hp <= 0){
         console.log(arr[1].name, "ha ganado")
+        document.querySelector(".vidap1").style.width = `0px`;
     }else if(arr[1].hp <= 0){
         console.log(arr[1].name, "ha ganado")
+        document.querySelector(".vidap2").style.width = `0px`;
     }
  }
  
 
-//document.querySelector("#bastianini").style.display = "none" al seleccionar bastianini me quita la imagen de la seleccion de pilotos
+
 
 
 
