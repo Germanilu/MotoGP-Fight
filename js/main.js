@@ -82,8 +82,11 @@ const fight = () => {
  }
  
 
-
-
+//Funcion para reiniciar el juego
+const reload = () => {
+    window.location.reload();
+    changeScreen(1);
+}
 
 
 let team1 = document.querySelector("#p1");
