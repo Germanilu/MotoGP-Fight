@@ -14,23 +14,33 @@ const changeScreen = (numScreen) => {
 
 
 let arr = [];
+
 //Funcion para añadir el piloto al array
 const add = (character) => {
     if(arr.length == 0){
         console.log("arr[0]",character.name)
         arr.push(character);
-        document.querySelector("#player1").innerHTML = `<img src="./img/Riders/${character.name}.png" />` //Se añade la img del piloto seleccionado
+        //Creo variable player 1 para añadir la imagen en el screen 2 y sucesivamente pasarla al screen 3
+        let player1 = document.querySelector("#player1");
+        player1.innerHTML = `<img src="./img/Riders/${character.name}.png" />`
+        team1.innerHTML = player1.innerHTML
         document.querySelector(`#${character.name}`).classList.add("selected") // Se bloquea el piloto en la pantalla
+        
     }else if(arr.length == 1){
         console.log("arr[1]",character.name)
         arr.push(character)
+        let player2 = document.querySelector("#player2");
+        player2.innerHTML = `<img src="./img/Riders/${character.name}.png" />`
+        team2.innerHTML = player2.innerHTML
         document.querySelector("#player2").innerHTML = `<img src="./img/Riders/${character.name}.png" />` 
-        document.querySelector(`#${character.name}`).classList.add("selected") // Se bloquea el piloto en la pantalla
+        document.querySelector(`#${character.name}`).classList.add("selected") 
     }else{
         console.log("No se pueden añadir mas pilotos! ") // Enseñar cartel que no se pueden añadir mas pilotos a la lucha
     }
     return arr
 }
+
+
 
 
 //Funcion Lucha
@@ -51,6 +61,9 @@ const fight = () => {
 //document.querySelector("#bastianini").style.display = "none" al seleccionar bastianini me quita la imagen de la seleccion de pilotos
 
 
+
+let team1 = document.querySelector("#p1");
+let team2 = document.querySelector("#p2");
 
 
 
