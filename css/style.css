@@ -16,7 +16,7 @@
 
 /* Pantallas con respectivo bg */
 .screen1{
-    background-image: url(.../img/bg/bg1.jpg);
+    background-image: url(../img/bg/bg1.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
