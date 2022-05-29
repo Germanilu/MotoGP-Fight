@@ -29,6 +29,8 @@ const add = (character) => {
         document.querySelector("#statsp1").innerHTML = character.name;
         // Se bloquea el piloto en la pantalla
         document.querySelector(`#${character.name}`).classList.add("selected") 
+        //Desactivo la funcion add() para que no se pueda seleccionar el mismo piloto
+        document.querySelector(`#${character.name}`).onclick = ""
         
     }else if(jugadores.length == 1){
         jugadores.push(character)
@@ -77,14 +79,14 @@ const fight = () => {
             //para que la barra de vida se ponga en 0
             document.querySelector(".vidap2").style.width = `0px`;
             //Enseño quien es el ganador
-            displayGanador.innerHTML = `Gana  ${jugadores[0].name}`
+            displayGanador.innerHTML = `The winner is: ${jugadores[0].name}`
             //Paso en la pantalla 4 la imagen y el nombre del ganador
             document.querySelector("#winner").innerHTML = `<img src="./img/Riders/${jugadores[0].name}.png" />`
             document.querySelector("#winner-name").innerHTML = jugadores[0].name
             
         }else{
             document.querySelector(".vidap1").style.width = `0px`;
-            displayGanador.innerHTML = `Gana  ${jugadores[1].name}`
+            displayGanador.innerHTML = `The winner is:  ${jugadores[1].name}`
             document.querySelector("#winner").innerHTML = `<img src="./img/Riders/${jugadores[1].name}.png" />`
             document.querySelector("#winner-name").innerHTML = jugadores[1].name
         }
