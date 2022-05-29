@@ -18,7 +18,7 @@ The application is divided in 4 screens
 
 ![Screen1](/img/readme-img/Screen1.png)
 
-Here you can see the logo of the game and by clicking on the screen you can move to the second screen.
+Here you can see the game's logo and by clicking on the screen you can proceed to the second screen.
 
 ![Screen2](/img/readme-img/screen2.png)
 
@@ -26,7 +26,8 @@ In this section you can choose the rider that you like and start the fight.
 
 ![Screen3](/img/readme-img/screen3.png)
 
-Here by clicking on "FIGHT!" you will make rider1 and rider2 attack, the attack depend on the lucky that the rider is, a function will generate a random number from 1 to 10 and add it to the inicial attack of the rider.
+Here by clicking on "FIGHT!" you will make rider1 and rider2 attack.
+The attack depends on the luck of the rider, a function will generate a random number from 1 to 10 and add it to the initial attack of the rider.
 
 ![Screen4](/img/readme-img/screen4.png)
 
