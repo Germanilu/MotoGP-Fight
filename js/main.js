@@ -3,7 +3,6 @@ let team1 = document.querySelector("#p1");
 let team2 = document.querySelector("#p2");
 let jugadores = [];
 
-
 //Funcion Cambio de pantalla
 const changeScreen = (numScreen) => {
     let fasewant = "section" + numScreen; // Concateno la palabra section con el numero de pantalla
@@ -15,10 +14,8 @@ const changeScreen = (numScreen) => {
     }
 }
 
-
 //Funcion para añadir el piloto al array
 const add = (character) => {
-
     if(jugadores.length == 0){
         jugadores.push(character);
         //Creo variable player 1 para añadir la imagen en el screen 2 y sucesivamente pasarla al screen 3
@@ -39,8 +36,6 @@ const add = (character) => {
         team2.innerHTML = player2.innerHTML
         document.querySelector("#statsp2").innerHTML = character.name;
         document.querySelector(`#${character.name}`).classList.add("selected") 
-    }else{
-        console.log("No se pueden añadir mas pilotos! ") // Enseñar cartel que no se pueden añadir mas pilotos a la lucha
     }
     //IF para que aparezca el boton para continuar a la siguiente pantalla
     if(jugadores.length == 2){
@@ -52,15 +47,17 @@ const add = (character) => {
 //Funcion Lucha
 const fight = () => {
     jugadores[0].attack()
+    console.log(jugadores[0])
     //Modifico el width de la barra de vida cada golpe
     document.querySelector(".vidap1").style.width = `${jugadores[0].hp}px`;
     jugadores[1].attack()
+    console.log(jugadores[1])
     document.querySelector(".vidap2").style.width = `${jugadores[1].hp}px`;
 
     //IF para los criticos, si el jugador saca en suerte un 9 el ataque se multiplica
-    if(jugadores[0].luck == 9){
+    if(jugadores[0].luck >= 9){
         jugadores[0].att *= 2;
-    }else if (jugadores[1].luck == 9){
+    }else if (jugadores[1].luck >= 9){
         jugadores[1]. att *= 2;
     }
 
