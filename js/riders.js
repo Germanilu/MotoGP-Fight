@@ -16,9 +16,9 @@ class Riders {
     }
 
     attack(){
-        this.luck = random(1,10);
-        this.att += (this.luck - this.def)
-        this.hp -= this.att  
+        this.luck = random(1,11);
+        this.att += (this.luck - this.def);
+        this.hp -= this.att;
     }
 }
 
