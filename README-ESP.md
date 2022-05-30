@@ -49,4 +49,4 @@ En esta última pantalla aparecerá el ganador en la parte más alta del podio, 
 
 ---------------------
 
-[:top:](###toc)
+[:top:](#toc)

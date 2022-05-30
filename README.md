@@ -49,4 +49,4 @@ On the last screen you can visualize who won the fight and by clicking on it the
 
 ---------------------
 
-[:top:](###Toc)
+[:top:](#Toc)
